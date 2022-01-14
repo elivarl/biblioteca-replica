@@ -20,7 +20,7 @@ public class PrestamoService {
 		prestamoRepository.save(prestamo);
 		return new PrestamoResponse(prestamo.getId(), formatoFecha(prestamo.getFechaMaximaDevolucion()));
 	}
-	
+	//formateo de fecha
 	private String formatoFecha(LocalDate fechaMaximaDevolucion) {
 		DateTimeFormatter formato;
 		formato=DateTimeFormatter.ofPattern("dd/MM/yyyy");
